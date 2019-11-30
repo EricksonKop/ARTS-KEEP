@@ -14,8 +14,16 @@
 
 <b>解答：</b>
 ```Python
-def test():
-  pass
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        for i in range(1, len(s)):
+            item = s.pop(i)
+            s.insert(0, item)
+        print(s)
+
 ```
 ## Review<br/>
 

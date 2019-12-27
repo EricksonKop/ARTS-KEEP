@@ -25,7 +25,7 @@ class Solution:
             nums.append(0)
 ```
 ## Review<br/>
-[分布式ID生成器](https://mp.weixin.qq.com/s/UYLAmNJ8_2Eoa4MuRRvjZA)
+[](https://mp.weixin.qq.com/s/UYLAmNJ8_2Eoa4MuRRvjZA)
 
 这应该是目前写的最为完整的关于 Web 视频播放的文章。从简单的 Video 元素到 MSE 直播的应用，作者给出了具体的代码，文章由浅入深，普及现代 Web 播放技术的前前后后。
 

@@ -1,41 +1,36 @@
 # ARTS第四周（2019年12月22日）
 ## Algorithm<br/>
-<b>题目：</b> [移动零](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/28/)
+<b>题目：</b> [加一](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/28/)
 
-给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。<br>
-说明:<br>
-必须在原数组上操作，不能拷贝额外的数组。<br>
-尽量减少操作次数。<br>
-
-<b>示例：</b> 
->输入：[0,1,0,3,12]<br>
->输出：[1,3,12,0,0]
+给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+你可以假设除了整数 0 之外，这个整数不会以零开头。<br>
+<b>示例1：</b> 
+>输入：[1,2,3]<br>
+>输出：[1,2,4]<br>
+>解释：输入数组表示数字 123。
 
 <b>解答：</b>
 ```Python
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        iter_times = len([one for one in nums if one == 0])
-        for i in range(iter_times):
-            index_del = nums.index(0)
-            nums.pop(index_del)
-            nums.append(0)
+    def plusOne(self, digits: List[int]) -> List[int]:
+        digit_num = 0
+        n = len(digits)
+        for i in range(n):
+            temp = digits[i] * (10 ** (n - 1 - i))
+            digit_num += temp
+        digit_num += 1
+        ret_list = []
+        digit_str = str(digit_num)
+        for j in range(len(digit_str)):
+            ret_list.append(digit_str[j])
+        return ret_list
 ```
 ## Review<br/>
-[](https://mp.weixin.qq.com/s/UYLAmNJ8_2Eoa4MuRRvjZA)
+[The Dark Side of Blockchain](https://hackernoon.com/the-dark-side-of-blockchain-46666adb8061)
 
-这应该是目前写的最为完整的关于 Web 视频播放的文章。从简单的 Video 元素到 MSE 直播的应用，作者给出了具体的代码，文章由浅入深，普及现代 Web 播放技术的前前后后。
-
-从原生视频API到带Video标签，从Media Source Extensions到Source Buffers，从切片到自适应码流Adaptive Streaming，从切换语言到最新的网络直播流媒体，视频直播正
-在变得越来越复杂，因为视频播放器必须支持许多功能：必须下载并解析某种清单文件；必须猜测当前的网络状况；需要注册用户首选项（例如，首选语言）；必须至少根据前两个要点知道要下载哪个段
-它必须管理一个段管道以在正确的时间顺序下载正确的段（同时下载每个段的效率很低：您需要最早的一个比下一个要早）；它也必须处理字幕，通常完全由 JS 管理；
-一些视频播放器还管理缩略图轨道，将鼠标悬停在进度条上时通常可以看到；许多服务也需要 DRM 管理，还有很多其他事情。复杂的，与Web兼容的视频播放器的核心仍然都是基于 MediaSource 和 SourceBuffers。
-这就是为什么这些任务通常由第三方库执行的原因。
-
-
+这是一篇关于区块链的另一面或者说是短板、缺点的文章。作者以脍炙人口的星战系列为引子，讲述了天资卓绝的“The Chosen One”Anakin如何因为自身的复杂任何，缺乏自律以及经验的匮乏导致最终一步步走向堕落，引出了目前被各路资本舆论吹捧的区块链的一系列潜在的问题。包括1、技术上落地的复杂性，政府态度普遍倾向保守以及黑客对代码漏洞的挖掘会威胁到链上的永固数据；2、可伸缩性，包括对算力资源和网络资源的巨量耗损与需求以及对生态不友好的一致性算法，尽管目前这些都在逐步得到解决；3、去中心化的架构带来管理上难题，如何在去中心化即没有权威的情况下应对达成契约过程前后所出现的一系列问题，对于政府来说尤其如此；4、区块链可以被设计的难以追踪匿名交易，这使得网上洗钱毒品交易等犯罪活动变得猖獗，典型例子就是数次被灭的暗网网站丝绸之路；5、区块链带来了新的安全问题，典型的51%洪水攻击；6、不成熟、不稳定、不被制度约束和不被实体货币绑定的特点让区块链货币的涨跌幅度远超出实际货币，这也使得它成为很多机构割韭菜的圣地；最后，作者总结自己的观点，即认为虽然现在区块链的热度有点类似于以前的互联网泡沫时期，不过即将到来的泡沫破灭对于市场回归理性有好处，最终成为仲裁者的将是合理的价值，而非被炒作起来的市场价格。他认为如果说区块链有问题，那被暴露的越早越好，毕竟，这事关每一个信息在未来将被上链的人，你和我，不是吗？<br>
+这篇文章作于2018年10月。
 
 ## Tip<br/>
 之前同事在测试环境的虚拟机中误操作rm -rf /* 导致虚拟机崩溃，在克隆重装的过程中发现隐藏的坑不少，在修改网卡绑定IP地址后无论是修改删除/etc/udev/rules.d/70-persistent-net.rules文件，

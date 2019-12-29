@@ -59,7 +59,6 @@ cursor.execute('commit')
 
 ## Share<br/>
 [用“升层思维”解决问题](https://mp.weixin.qq.com/s/2Cs8ybu5Kg9QYr5Jgyu6VA)
-
 阿里资深技术专家张荣华从问题的本质入手，用“升层思维”解决问题，告诉我们创新的核心，给出高效工作的途径。
 
 一、问题的本质<br/>

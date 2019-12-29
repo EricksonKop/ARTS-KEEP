@@ -37,7 +37,8 @@ class Solution:
 这是一篇关于账户安全普及的文章，主要介绍了主流的网站密码加密储存方法，如明文储存，哈希储存以及，加盐哈希。随后作者就使用python撞库攻击做了个大致介绍，就是通过黑掉网站系统管理员得到数据库的访问权限，从而得到储存在库上的密码，随后和黑客自身拥有的字典库（彩虹表诸如此类）进行compare，从而得到想要的用户密码。最后作者给出了保证密码安全的建议，如保证自己的常用邮箱处于最高等级安全防护，不要重用密码，使用有意义的短语类密码，使用1Password这样的密码管理软件。
 
 ## Tip<br/>
-关于BLOB写操作
+#### 关于BLOB写操作
+这周有碰到使用python脚本向oracle数据库远程插入数据，其中数据类型有base64图像以及str字段等，发现需要使用cx_Oracle这个库以及oracle对应的客户端软件。
 现在我有3个python的数据，分别是：
 ```Python
     date_forecast = ‘2011-06-29’
@@ -50,7 +51,7 @@ class Solution:
 
 sqlStr = "INSERT INTO aurora (date_forecast, filename, content) VALUES ('%s', '%s', :blobData)" % (date_forecast, filename)
 请注意blobData前边的冒号，是定义了一个叫做blobData的Oracle变量。然后：<br>
-cursor.setinputsizes(blobData=cx_Oracle.BLOB)
+cursor.setinputsizes(blobData=cx_Oracle.BLOB)<br>
 将blobData变量定义为cx_Oracle.BLOB的实例，终于让python和Oracle握手了。接下来，就是水到渠成的事情了：<br>
 cursor.execute(sqlStr, {'blobData':content})<br>
 cursor.execute('commit')
@@ -68,6 +69,6 @@ cursor.execute('commit')
 1.误把方法/手段当“问题”<br>
 2.误把挑战当"问题"<br>
 3.思考问题时缺少时间维度<br>
-六、升层思考及升维思考:缺乏升层思考的升维思考是不完整的自顶向下
-七、是新问题还是新技术解决老问题？
+六、升层思考及升维思考:缺乏升层思考的升维思考是不完整的自顶向下<br>
+七、是新问题还是新技术解决老问题？<br>
 八、小结:区分手段和问题;明确问题定义;对问题背后的问题进行升层思考;对问题的分解进行升维思考

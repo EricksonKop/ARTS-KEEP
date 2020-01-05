@@ -34,8 +34,8 @@ class Solution:
 
 ```
 ## Review<br/>
-[20-predictions-about-software-development-trends-in-2020](https://towardsdatascience.com/20-predictions-about-software-development-trends-in-2020-afb8b110d9a0)
-2020软件开发趋势：
+[20-predictions-about-software-development-trends-in-2020](https://towardsdatascience.com/20-predictions-about-software-development-trends-in-2020-afb8b110d9a0)<br>
+2020软件开发趋势：<br>
 基础设施：终将上云、容器化：Kubernetes 将会更酷、软件架构：微服务成为主流、开发：Python 将吞噬世界、企业级开发：Java 和 JVM 为王、
 Java 企业级开发：Spring、开发：Rust, Swift, Kotlin, TypeScript 会有一个突破、Web：JavaScript 继续主导、JavaScript Web 框架：React 领先、
 APP 跨平台混合开发：React Native、API：REST为主、数据库：SQL 主导，分布式 SQL 崛起、大数据计算：Spark 继续闪耀、大数据流处理：Flink、

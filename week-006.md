@@ -42,9 +42,8 @@ APP 跨平台混合开发：React Native、API：REST为主、数据库：SQL �
 字节码：WebAssembly 会开始大量应用。
 
 ## Tip<br/>
-#### 读取配置文件
-configparser模块常被用来读取配置文件，还可以用cfg.write()方法；
-ConfigParser有个容易被忽视的特性，就是它能一次性读取多个配置文件然后合并成一个配置
+#### 读取配置文件模块
+configparser模块常被用来读取配置文件，还可以用cfg.write()方法；ConfigParser有个容易被忽视的特性，就是它能一次性读取多个配置文件然后合并成一个配置
 
 
 ## Share<br/>

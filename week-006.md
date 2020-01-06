@@ -42,23 +42,9 @@ APP 跨平台混合开发：React Native、API：REST为主、数据库：SQL �
 字节码：WebAssembly 会开始大量应用。
 
 ## Tip<br/>
-#### 关于BLOB写操作
-这周有碰到使用python脚本向oracle数据库远程插入数据，其中数据类型有base64图像以及str字段等，发现需要使用cx_Oracle这个库以及oracle对应的客户端软件。
-现在我有3个python的数据，分别是：
-```Python
-    date_forecast = ‘2011-06-29’
-    filename = ‘aurora.jpg’’
-    file = open('aurora.jpg', 'rb')’
-    content = fp.read()
-    fp.close()
-```
-网上的资料说，插入包含blob的记录，需要先插入空的blob对象，然后再update该记录——这意味着，一次INSERT操作，至少要访问3次数据库。
-sqlStr = "INSERT INTO aurora (date_forecast, filename, content) VALUES ('%s', '%s', :blobData)" % (date_forecast, filename)
-请注意blobData前边的冒号，是定义了一个叫做blobData的Oracle变量。然后：<br>
-cursor.setinputsizes(blobData=cx_Oracle.BLOB)<br>
-将blobData变量定义为cx_Oracle.BLOB的实例，终于让python和Oracle握手了。接下来，就是水到渠成的事情了：<br>
-cursor.execute(sqlStr, {'blobData':content})<br>
-cursor.execute('commit')
+#### 读取配置文件
+configparser模块常被用来读取配置文件，还可以用cfg.write()方法；
+ConfigParser有个容易被忽视的特性，就是它能一次性读取多个配置文件然后合并成一个配置
 
 
 ## Share<br/>

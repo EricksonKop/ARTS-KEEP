@@ -1,36 +1,48 @@
-# ARTS第六周（2020年1月5日）
+# ARTS第七周（2020年1月12日）
 ## Algorithm<br/>
-<b>题目：</b> [存在重复](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/24/)
+<b>题目：</b> [从排序数组中删除重复项](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/21/)
 
-给定一个整数数组，判断是否存在重复元素。
-如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。<br>
+给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。<br>
 <b>示例1：</b> 
->输入：[1,2,3,1]<br>
->输出：true<br>
+给定数组 nums = [1,1,2], <br>
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 <br>
+你不需要考虑数组中超出新长度后面的元素。<br>
 <b>示例2：</b> 
->输入：[1,2,3,4]<br>
->输出：false<br>
-<b>示例3：</b> 
->输入：[1,1,1,3,3,4,3,2,4,2]<br>
->输出：true<br>
+给定 nums = [0,0,1,1,1,2,2,3,3,4], <br>
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。 <br>
+你不需要考虑数组中超出新长度后面的元素。<br>
+<b>说明: </b> 
+为什么返回数值是整数，但输出的答案是数组呢?<br>
+请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>
+你可以想象内部操作如下:<br>
+```C
+// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i < len; i++) {
+    print(nums[i]);
+}
+```
 
 <b>解答：</b>
 ```Python
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        n = len(nums)
-        count_d = {}
-        for i in range(n):
-            if nums[i] not in count_d:
-                count_d[nums[i]] = 1
-            else:
-                count_d[nums[i]] += 1
-        for value in count_d.values():
-            if value > 1:
-                return True
-            else:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        while True:
+            if i >= len(nums):
+                break
+            elif i == 0 or nums[i] != nums[i-1]:
+                i += 1
                 continue
-        return False
+            else:
+                nums.pop(i)
+                continue
+        return len(nums)
 
 ```
 ## Review<br/>

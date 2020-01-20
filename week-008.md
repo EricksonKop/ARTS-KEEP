@@ -26,12 +26,13 @@ class Solution:
 
 ```
 ## Review<br/>
-[7-habits-of-highly-effective-programmers](https://dev.to/seattledataguy/7-habits-of-highly-effective-programmers-inspired-by-an-ex-google-techlead-humor-4b4k)<br>
-高效程序员的七个习惯 <br>
-软件工程师花费大量时间通过练习leet code问题和完善简历来获得更好的面试通过可能。一旦他们最终被谷歌、亚马逊或其他公司录用，他们可能会发现：过去用来得到这份工作的技能与他们日常工作中需要的技能并不匹配。
-我们的团队受到 TechLead 创建的高效程序员七项技能的启发。我们想提供我们自己对这个话题的看法。以下是我们总结的高效程序员的七项技能。
-1. 学习如何阅读别人的代码：你需要确保在阅读他人代码时尽可能多地找出问题所在；您的代码应该设计得非常好，不需要任何文档；这一切都来自于对所有代码的良好理解以及能够阅读以往的代码。阅读别人的代码会让你变得有价值，因为这项技能甚至可以让你接手那些让别人难堪的过度工程化的系统。
-2. 对坏项目的感觉：有许多技能需要花时间去学习。我们认为值得了解的技能之一是理解什么项目不值得做，什么项目显然是行尸走肉。
+[Automating Instagram API Using Python: Gain Active Followers](https://hackernoon.com/automating-instagram-api-with-python-gain-followers-u115322z)<br>
+利用非官方的InsAPI来自动化ins操作让自己“涨粉” <br>
+利用第三方提供的Instagram API接口，帮助建立一个使自己Ins账号“涨粉”的小应用，其基本策略如下：
+1. 找一个特定领域的有影响力的账号，通过该账号最近一次post，爬取所有点了赞的人；
+2. 遍历上面爬取到的账号，如果他们不在自己账号的following列表里面，则关注；
+3. 一段时间后，查看自己的followers列表，如果自己的following列表里面有账号不在follwers列表里，则取关（这里应该有个策略就是过滤掉一些肯定不会关注自己的很有影响力的而自己又必然不会取关的账号）。
+你觉得这个策略可行吗？
 
 ## Tip<br/>
 #### linux机器source命令失效

@@ -12,16 +12,7 @@
 <b>解答：</b>
 ```Python
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            num = nums[i]
-            minus = target - num
-            if minus in nums[i+1:]:
-                result = [i, i+nums[i+1:].index(minus)+1]
-                print(result)
-                return result
-            else:
-                continue
+   
 
 ```
 ## Review<br/>
@@ -35,10 +26,9 @@ class Solution:
 
 ## Tip<br/>
 #### linux机器source命令失效
-Linux虚拟机在修改完/etc/hosts文件后打算输入source命令即时生效，提示command not found，使用locate source /etc/hosts方法可破。<br>
+<br>
 #### Spring Boot Admin在开启过程中遇到的问题
-在使用spring-boot-admin过程中遇到application无法注册的问题，保证hostname解析正确，开启jar时制定初始堆和最大堆大小，开启监控和被监控应用。
 
 ## Share<br/>
-### 小灰的算法之旅：字符串匹配算法<br>
-字符串RK匹配算法：讲述了字符串匹配问题中的原始暴力算法（BF）和原理和缺点，在此基础上改进的优化算法RK算法，及其改进的核心————哈希算法，决定了改进后算法的复杂度。
+### <br>
+

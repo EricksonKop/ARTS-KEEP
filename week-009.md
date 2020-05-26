@@ -13,11 +13,10 @@
      因为无论你拿走 1 块、2 块 还是 3 块石头，最后一块石头总是会被你的朋友拿走。<br>
 
 <b>解答：</b>
-```Python
+```Python3
 class Solution:
     def canWinNim(self, n: int) -> bool:
         return False if n % 4 == 0 else True
-
 ```
 ## Review<br/>
 [Automating Instagram API Using Python: Gain Active Followers](https://hackernoon.com/automating-instagram-api-with-python-gain-followers-u115322z)<br>

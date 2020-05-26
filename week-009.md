@@ -23,9 +23,12 @@ class Solution:
 
 
 ## Tip<br/>
-#### linux机器source命令失效
-<br>
-#### Spring Boot Admin在开启过程中遇到的问题
+#### 打印出占用Linux机器内存资源最多的10个进程：
+
+ps -auxf | sort -nr -k 4 | head 10<br>
+#### 打印出占用Linux机器CPU资源最多的10个进程：
+
+ps -auxf | sort -nr -k 3 | head 10<br>
 
 ## Share<br/>
 ### <br>

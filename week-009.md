@@ -31,5 +31,5 @@ ps -auxf | sort -nr -k 4 | head 10<br>
 ps -auxf | sort -nr -k 3 | head 10<br>
 
 ## Share<br/>
-### <br>
-
+### [为什么腾讯QQ的大数据平台选择了这款数据库？](https://mp.weixin.qq.com/s/cqsNlhZ9yD5jfO3xyEa_Kg)<br>
+为了解决海量监控数据场景的问题，该团队引入高性能的开源时序数据库InfluxDB，基于源码的基础进行二次开发，且文章把InfluxDB和其他被用作时序存储的系统（如ElasticSearch、MongoDB、OpenTSDB）做简要的对比，凸出了该款数据库在时序数据场景下的巨大优势。

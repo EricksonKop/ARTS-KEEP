@@ -19,8 +19,8 @@ class Solution:
         return False if n % 4 == 0 else True
 ```
 ## Review<br/>
-[Automating Instagram API Using Python: Gain Active Followers](https://hackernoon.com/automating-instagram-api-with-python-gain-followers-u115322z)<br>
-
+[free-speech-pleasemark-zuckerberg-profits-from-rage-as-much-as-donald-trump-does](https://hackernoon.com/automating-instagram-api-with-python-gain-followers-u115322z)<br>
+这篇文章的作者毫无疑问是个反川分子，用the Prince of Darkness，evil等词来形容trump，同时指出本应持民主党观点的扎克伯格为何却一反常态的支持trump及其支持者的言论而不进行管控（是的，他们也有管控，而且一点也不少），本质上在于他是个十足的商人，至少这一点上和川普很像，他的目的在于通过两派言论的不断传播，升级，掐架从而带来流量和广告。
 
 ## Tip<br/>
 #### 打印出占用Linux机器内存资源最多的10个进程：
